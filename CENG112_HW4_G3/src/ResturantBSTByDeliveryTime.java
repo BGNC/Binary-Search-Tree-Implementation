@@ -135,60 +135,8 @@ public class ResturantBSTByDeliveryTime<T extends Comparable<T>>{
         }
         return false;
     }
-    private BinaryNode<T> remove(BinaryNode<T> node, T elem) {
-
-        if (node == null) return null;
-
-        int cmp = elem.compareTo(node.data);
-
-
-        if (cmp < 0) {
-            node.left = remove(node.left, elem);
-
-        } else if (cmp > 0) {
-            node.right = remove(node.right, elem);
-
-        } else {
-
-
-            if (node.left == null) {
-
-                BinaryNode<T> rightChild = node.right;
-
-                node.data = null;
-                node = null;
-
-                return rightChild;
-
-
-            } else if (node.right == null) {
-
-                BinaryNode<T> leftChild = node.left;
-
-                node.data = null;
-                node = null;
-
-                return leftChild;
-
-
-            } else {
-
-                // Find the leftmost node in the right subtree
-                BinaryNode<T> tmp = findSmallest(node.right);
-
-                // Swap the data
-                node.data = tmp.data;
-
-
-                node.right = remove(node.right, tmp.data);
-
-
-
-            }
-        }
-
-        return node;
-    }
+   
+    
 
     public boolean contains(T item) {
         return get(item) != null;
