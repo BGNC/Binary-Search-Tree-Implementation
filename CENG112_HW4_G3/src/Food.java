@@ -22,7 +22,10 @@ public class Food implements Orderable, Comparable<Food>{
     public Restaurant fRestaurant(){return restaurant;}
 
     @Override
-    public void updatePrice(double Price) { price=price*6/5; }
+    public void updatePrice(double Price) { 
+        update price increase %20
+        price=price*6/5; 
+    }
 
     @Override
     public void updateStock(int Stock) { stock=(Stock/2); }
