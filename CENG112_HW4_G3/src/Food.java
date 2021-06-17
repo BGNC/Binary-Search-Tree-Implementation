@@ -23,7 +23,7 @@ public class Food implements Orderable, Comparable<Food>{
 
     @Override
     public void updatePrice(double Price) { 
-        update price increase %20
+        // update price increase %20
         price=price*6/5; 
     }
 
